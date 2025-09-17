@@ -30,7 +30,7 @@ module.exports = {
   },
   devServer: {
     static: path.join(__dirname, "public"),
-    host: "local.pixelbinz0.de",
+    host: "local.sdk.glamar.io",
     port: 9090,
     allowedHosts: "all",
     headers: {

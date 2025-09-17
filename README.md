@@ -19,7 +19,7 @@ You can install **npm** with Node.js. If you don't have it installed yet, you ca
 2. Use mkcert to generate a locally-trusted development certificate. Run the following command:
 
    ```bash
-   mkcert -key-file key.pem -cert-file cert.pem “erasez0.de”
+   mkcert -key-file key.pem -cert-file cert.pem “glamar.io”
    ```
 
 3. Create a folder named **ssl** at the root level of the repository.
@@ -33,7 +33,7 @@ You can install **npm** with Node.js. If you don't have it installed yet, you ca
    Insert the following lines:
 
    ```bash
-   127.0.0.1       local.pixelbinz0.de
+
    127.0.0.1       local.sdk.glamar.io
    ```
 
@@ -44,13 +44,13 @@ Open and edit `/etc/hosts`.
 Insert the following lines:
 
 ```bash
-127.0.0.1       local.pixelbinz0.de
+
 127.0.0.1       local.sdk.glamar.io
 ```
 
 6. Login to https://console.pixelbin.io/
 
-7. Goto GlamAR > SDK Config > Allowed Domains and add https://local.pixelbinz0.de
+7. Goto GlamAR > SDK Config > Allowed Domains and add https://local.sdk.glamar.io
 
 To run the GlamAR React Demo locally, follow the steps below:
 
@@ -68,7 +68,7 @@ npm start
 
 3. Open the project in your browser:
 
-- With certificate: [https://local.pixelbinz0.de:9090](https://local.pixelbinz0.de:9090)
+- With certificate: [https://local.sdk.glamar.io:9090](https://local.sdk.glamar.io:9090)
 
 ## Project Structure
 

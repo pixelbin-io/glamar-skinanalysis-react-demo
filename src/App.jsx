@@ -3,11 +3,16 @@ import GlamARDemo from "./GlamARDemo";
 
 export default function App() {
   const [accessToken, setAccessToken] = useState("");
+  const [appId, setAppId] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = () => {
     if (accessToken.trim().length < 10) {
       alert("Please enter a valid access token");
+      return;
+    }
+    if (appId.trim().length < 10) {
+      alert("Please enter a valid app id");
       return;
     }
     setSubmitted(true);
@@ -25,15 +30,22 @@ export default function App() {
               type="text"
               placeholder="Enter your GlamAR SDK Access Token"
               value={accessToken}
-              onChange={(e) => setAccessToken(e.target.value)}
+              onChange={(token) => setAccessToken(token.target.value)}
             />
-            <button onClick={handleSubmit} disabled={!accessToken}>
+            <p>Please enter your Skin Analysis App ID to continue.</p>
+            <input
+              type="text"
+              placeholder="Enter your Skin Analysis App ID"
+              value={appId}
+              onChange={(appid) => setAppId(appid.target.value)}
+            />
+            <button onClick={handleSubmit} disabled={!accessToken || !appId}>
               Initialize SDK
             </button>
           </div>
         </div>
       ) : (
-        <GlamARDemo accessToken={accessToken} />
+        <GlamARDemo accessToken={accessToken} appId_={appId} />
       )}
     </>
   );

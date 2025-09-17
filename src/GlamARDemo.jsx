@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import * as GlamAR from "@glamario/core-web";
 
-export default function GlamARDemo({ accessToken }) {
+export default function GlamARDemo({ accessToken, appId_ }) {
   useEffect(() => {
     const config = {
       platform: "web",
@@ -9,7 +9,7 @@ export default function GlamARDemo({ accessToken }) {
       category: "skinanalysis",
       configuration: {
         skinAnalysis: {
-          appId: "your_skin_analysis_app_id", //replace with your actual app id
+          appId: appId_, //replace with your actual app id
         },
       },
     };
